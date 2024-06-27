@@ -6,6 +6,7 @@ using namespace Rcpp;
 //' @param x A double
 //' @param y A double
 //' @export
+// [[Rcpp::interfaces(r, cpp)]]
 // [[Rcpp::export]]
 double add_cpp(double x, double y) {
   double val = x + y;
