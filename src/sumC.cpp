@@ -1,6 +1,10 @@
 #include <Rcpp.h>
 using namespace Rcpp;
-
+//' Sum along a vector
+//'
+//' Returns the sum of a vector, x, of real numbers.
+//' @param x A vector of real/double numbers
+//' @export
 // [[Rcpp::export]]
 
 double sumC(NumericVector x) {
