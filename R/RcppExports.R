@@ -5,3 +5,7 @@ add_cpp <- function(x, y) {
     .Call(`_rpkgcpp_add_cpp`, x, y)
 }
 
+sumC <- function(x) {
+    .Call(`_rpkgcpp_sumC`, x)
+}
+
