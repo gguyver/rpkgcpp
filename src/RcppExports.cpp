@@ -2,6 +2,7 @@
 // Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #include "../inst/include/rpkgcpp.h"
+#include <RcppArmadillo.h>
 #include <Rcpp.h>
 #include <string>
 #include <set>
@@ -70,6 +71,18 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// inner_prod
+double inner_prod(arma::vec x, arma::vec y);
+RcppExport SEXP _rpkgcpp_inner_prod(SEXP xSEXP, SEXP ySEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< arma::vec >::type x(xSEXP);
+    Rcpp::traits::input_parameter< arma::vec >::type y(ySEXP);
+    rcpp_result_gen = Rcpp::wrap(inner_prod(x, y));
+    return rcpp_result_gen;
+END_RCPP
+}
 // sumC
 double sumC(NumericVector x);
 RcppExport SEXP _rpkgcpp_sumC(SEXP xSEXP) {
@@ -102,6 +115,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_rpkgcpp_add_cpp", (DL_FUNC) &_rpkgcpp_add_cpp, 2},
     {"_rpkgcpp_approx_pi", (DL_FUNC) &_rpkgcpp_approx_pi, 1},
     {"_rpkgcpp_dq_approx_pi", (DL_FUNC) &_rpkgcpp_dq_approx_pi, 1},
+    {"_rpkgcpp_inner_prod", (DL_FUNC) &_rpkgcpp_inner_prod, 2},
     {"_rpkgcpp_sumC", (DL_FUNC) &_rpkgcpp_sumC, 1},
     {"_rpkgcpp_RcppExport_registerCCallable", (DL_FUNC) &_rpkgcpp_RcppExport_registerCCallable, 0},
     {NULL, NULL, 0}

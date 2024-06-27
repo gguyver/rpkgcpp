@@ -13,6 +13,10 @@ dq_approx_pi <- function(N) {
     .Call(`_rpkgcpp_dq_approx_pi`, N)
 }
 
+inner_prod <- function(x, y) {
+    .Call(`_rpkgcpp_inner_prod`, x, y)
+}
+
 #' Sum along a vector
 #'
 #' Returns the sum of a vector, x, of real numbers.
