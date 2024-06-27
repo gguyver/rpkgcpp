@@ -13,6 +13,8 @@ RoxygenNote: 7.3.1
 URL: https://github.com/gguyver/rpkgcpp
 BugReports: https://github.com/gguyver/rpkgcpp/issues
 LinkingTo: 
-    Rcpp
+    Rcpp,
+    dqrng
 Imports: 
+    dqrng,
     Rcpp

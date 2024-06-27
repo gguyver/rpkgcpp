@@ -9,6 +9,10 @@ approx_pi <- function(N) {
     .Call(`_rpkgcpp_approx_pi`, N)
 }
 
+dq_approx_pi <- function(N) {
+    .Call(`_rpkgcpp_dq_approx_pi`, N)
+}
+
 #' Sum along a vector
 #'
 #' Returns the sum of a vector, x, of real numbers.
