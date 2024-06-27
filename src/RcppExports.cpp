@@ -48,6 +48,17 @@ RcppExport SEXP _rpkgcpp_add_cpp(SEXP xSEXP, SEXP ySEXP) {
     UNPROTECT(1);
     return rcpp_result_gen;
 }
+// approx_pi
+double approx_pi(const int N);
+RcppExport SEXP _rpkgcpp_approx_pi(SEXP NSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< const int >::type N(NSEXP);
+    rcpp_result_gen = Rcpp::wrap(approx_pi(N));
+    return rcpp_result_gen;
+END_RCPP
+}
 // sumC
 double sumC(NumericVector x);
 RcppExport SEXP _rpkgcpp_sumC(SEXP xSEXP) {
@@ -78,6 +89,7 @@ RcppExport SEXP _rpkgcpp_RcppExport_registerCCallable() {
 
 static const R_CallMethodDef CallEntries[] = {
     {"_rpkgcpp_add_cpp", (DL_FUNC) &_rpkgcpp_add_cpp, 2},
+    {"_rpkgcpp_approx_pi", (DL_FUNC) &_rpkgcpp_approx_pi, 1},
     {"_rpkgcpp_sumC", (DL_FUNC) &_rpkgcpp_sumC, 1},
     {"_rpkgcpp_RcppExport_registerCCallable", (DL_FUNC) &_rpkgcpp_RcppExport_registerCCallable, 0},
     {NULL, NULL, 0}

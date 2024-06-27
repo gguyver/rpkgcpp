@@ -5,6 +5,10 @@ add_cpp <- function(x, y) {
     .Call(`_rpkgcpp_add_cpp`, x, y)
 }
 
+approx_pi <- function(N) {
+    .Call(`_rpkgcpp_approx_pi`, N)
+}
+
 #' Sum along a vector
 #'
 #' Returns the sum of a vector, x, of real numbers.
